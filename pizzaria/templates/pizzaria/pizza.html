@@ -22,11 +22,11 @@
 </p>
 
 <ul>
-  {% for c in comments %}
+  {% for comments in comments %}
   <div class="background">
       <span style="color:white">
           <h4 class="card-header">
-          {{ c.comments|linebreaks }}
+          {{ comments.comments|linebreaks }}
           </h4>
       </span>
       <span style="color:white"><div class="card-body">
