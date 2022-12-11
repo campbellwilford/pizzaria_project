@@ -1,0 +1,22 @@
+{% extends "pizzaria/base.html" %} 
+
+{% block content %} 
+
+<h3>
+  <p>
+      <span style="text-decoration: underline; color:palevioletred"> Pizzas </span>
+  </p>
+</h3>
+
+<ul>
+  {% for pizza in all_pizzas %}
+  <li> 
+    <a href="{% url 'pizzaria:pizza' pizza.id%}">{{pizza}}</a>
+  </li>
+
+  {% empty %} 
+  <li> No pizzas have been added yet. </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %} 
