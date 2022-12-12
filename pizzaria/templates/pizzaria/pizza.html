@@ -5,7 +5,10 @@
 {% endblock page_header %}
 
 {% block content %}
-
+<p>
+  {% load static %} 
+  <img src="{{ Pizza.image.url }}">
+</p>
 <ul>
     {% for t in toppings %}
 
